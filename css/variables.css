@@ -1,0 +1,30 @@
+:root{
+
+    /* Colores */
+
+    --primary:#2563EB;
+    --secondary:#1E40AF;
+    --accent:#F59E0B;
+
+    --white:#FFFFFF;
+    --black:#111827;
+
+    --background:#F8FAFC;
+
+    --text:#374151;
+
+    /* Tipografía */
+
+    --font:'Arial',sans-serif;
+
+    /* Tamaños */
+
+    --radius:12px;
+
+    --shadow:0px 10px 25px rgba(0,0,0,.08);
+
+    --transition:.3s;
+
+    --max-width:1200px;
+
+}

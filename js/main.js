@@ -1,0 +1,1 @@
+console.log("Business Template cargada correctamente");
