@@ -36,10 +36,10 @@ const dateRegex = /\d{1,2}\s*(de)?\s*(enero|febrero|marzo|abril|mayo|junio|julio
 
 // Respuestas simples que no necesitan contexto
 const simpleReplies = [
-    { keywords: ["hola", "buenas", "hey"], reply: "¡Hola! Encantado de saludarte 😊 ¿Quieres saber sobre horarios, precios o reservas?" },
+    { keywords: ["hola", "buenas", "hey"], reply: "¡Hola! Encantado de saludarte ¿Quieres saber sobre horarios, precios o reservas?" },
     { keywords: ["horario", "hora", "abierto", "cerrado"], reply: "Nuestro horario es de lunes a sábado, de 9:00 a 20:00h. ¡Los domingos descansamos! 🕒" },
-    { keywords: ["gracias"], reply: "¡A ti por escribir! Si necesitas algo más, aquí estoy 🙌" },
-    { keywords: ["adios", "adiós", "chao", "bye"], reply: "¡Hasta pronto! Que tengas un gran día 👋" }
+    { keywords: ["gracias"], reply: "¡A ti por escribir! Si necesitas algo más, aquí estoy " },
+    { keywords: ["adios", "adiós", "chao", "bye"], reply: "¡Hasta pronto! Que tengas un gran día " }
 ];
 
 const defaultReply = "Entiendo. Un miembro de nuestro equipo revisará tu mensaje y te responderá enseguida. Mientras tanto, ¿puedo ayudarte con horarios, precios o reservas?";
@@ -79,7 +79,7 @@ function getBotReply(userText) {
             pendingIntent = null; // resuelto, reseteamos el contexto
             return `El precio de ${service.id === "chatbot" ? "los chatbots" : "ese servicio"} es de ${service.precio}. ¿Quieres que te pase más información? 💬`;
         }
-        return "No he reconocido el servicio 🤔 ¿Te refieres a Chatbot, Reservas, Integración con Google Calendar o Página Web?";
+        return "No he reconocido el servicio  ¿Te refieres a Chatbot, Reservas, Integración con Google Calendar o Página Web?";
     }
 
     // --- 2. Si el bot está esperando que le digan el DÍA (para la reserva) ---
@@ -87,9 +87,9 @@ function getBotReply(userText) {
         const day = findDay(text);
         if (day) {
             pendingIntent = null;
-            return `¡Reservado para el ${day}! ✅ Te enviaremos un recordatorio antes de la cita.`;
+            return `¡Reservado para el ${day}!  Te enviaremos un recordatorio antes de la cita.`;
         }
-        return "No he pillado el día 📅 ¿Qué día te viene bien (por ejemplo, 'martes' o '15 de julio')?";
+        return "No he pillado el día ¿Qué día te viene bien (por ejemplo, 'martes' o '15 de julio')?";
     }
 
     // --- 3. Sin contexto pendiente: analizamos el mensaje desde cero ---
@@ -108,7 +108,7 @@ function getBotReply(userText) {
     if (text.includes("reserva") || text.includes("cita") || text.includes("reservar")) {
         const day = findDay(text); // ¿ya dijo el día en el mismo mensaje?
         if (day) {
-            return `¡Reservado para el ${day}! ✅ Te enviaremos un recordatorio antes de la cita.`;
+            return `¡Reservado para el ${day}!  Te enviaremos un recordatorio antes de la cita.`;
         }
         pendingIntent = "reserva"; // nos quedamos esperando el día
         return "¡Perfecto! ¿Qué día te viene bien?";
