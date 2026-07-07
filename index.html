@@ -14,25 +14,28 @@
     <link rel="stylesheet" href="css/responsive.css">
     <link rel="stylesheet" href="css/animations.css">
 
+    <!-- Iconos Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
 </head>
 
 <body>
+
 <header class="header">
 
     <div class="container navbar">
 
         <a href="#" class="logo">
-            Business<span>Template</span>
+            Desss<span>Web</span>
         </a>
 
         <nav class="nav">
 
             <ul class="nav-links" id="nav-links">
-                <li><a href="#">Inicio</a></li>
-                <li><a href="#">Servicios</a></li>
+                <li><a href="#" data-target="inicio" class="nav-link active">Inicio</a></li>
+                <li><a href="#" data-target="servicios" class="nav-link">Servicios</a></li>
                 <li><a href="#">Galería</a></li>
                 <li><a href="#">Contacto</a></li>
-
             </ul>
 
         </nav>
@@ -40,9 +43,7 @@
         <a href="#" class="btn">Reserva</a>
 
         <div class="menu-toggle" id="menu-toggle">
-
             ☰
-
         </div>
 
     </div>
@@ -50,7 +51,136 @@
 </header>
 
 
+<!-- ===========================
+     INICIO / HERO
+=========================== -->
+<section class="hero page-section active" id="inicio">
+    <div class="container hero-container">
+
+        <div class="hero-left">
+            <span class="badge">Bienvenido</span>
+            <h1>Impulsa tu negocio con soluciones digitales</h1>
+            <p>Creamos webs, chatbots y sistemas de reservas a medida para que tu negocio venda más y trabaje menos.</p>
+
+            <div class="hero-buttons">
+                <a href="#" class="btn">Empezar ahora</a>
+                <a href="#" class="btn-outline">Ver servicios</a>
+            </div>
+        </div>
+
+        <div class="hero-right hero-image">
+            <img src="https://via.placeholder.com/600x400" alt="Imagen de portada">
+        </div>
+
+    </div>
+</section>
+
+
+<!-- ===========================
+     SERVICIOS
+=========================== -->
+<section class="services page-section" id="servicios">
+    <div class="container">
+
+        <div class="section-title">
+            <span>Lo que hacemos</span>
+            <h2>Nuestros Servicios</h2>
+            <p>Soluciones digitales a medida para hacer crecer tu negocio.</p>
+        </div>
+
+        <div class="services-grid">
+
+            <div class="service-card" data-service="chatbot">
+                <i class="fa-solid fa-robot"></i>
+                <h3>Chatbots</h3>
+                <p>Automatiza la atención al cliente 24/7 con bots inteligentes.</p>
+                <span class="service-link">Ver más →</span>
+            </div>
+
+            <div class="service-card" data-service="reservas">
+                <i class="fa-solid fa-calendar-check"></i>
+                <h3>Sistema de Reservas</h3>
+                <p>Gestiona citas y reservas online de forma automática.</p>
+                <span class="service-link">Ver más →</span>
+            </div>
+
+            <div class="service-card" data-service="calendar">
+                <i class="fa-solid fa-calendar-days"></i>
+                <h3>Integración Google Calendar</h3>
+                <p>Sincroniza tus citas y eventos automáticamente con Google Calendar.</p>
+                <span class="service-link">Ver más →</span>
+            </div>
+
+            <div class="service-card" data-service="web">
+                <i class="fa-solid fa-laptop-code"></i>
+                <h3>Páginas Web</h3>
+                <p>Webs profesionales, rápidas y adaptadas a cualquier dispositivo.</p>
+                <span class="service-link">Ver más →</span>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
+<!-- ===========================
+     DEMO: CHATBOT
+=========================== -->
+<section class="demo-section page-section" id="demo-chatbot">
+    <div class="container">
+
+        <button class="back-btn" id="back-to-servicios">← Volver a Servicios</button>
+
+        <div class="section-title">
+            <span>Demo en vivo</span>
+            <h2>Chatbot de Atención al Cliente</h2>
+            <p>Así de fácil sería para tus clientes hablar con tu negocio. Escribe algo como "horario", "precio" o "reserva".</p>
+        </div>
+
+        <div class="chat-window">
+
+            <div class="chat-header">
+                <i class="fa-solid fa-robot"></i>
+                <span>Asistente Virtual</span>
+                <span class="chat-status">● En línea</span>
+            </div>
+
+            <div class="chat-messages" id="chat-messages">
+                <div class="message bot">
+                    ¡Hola! 👋 Soy el asistente virtual de tu negocio. ¿En qué puedo ayudarte?
+                </div>
+            </div>
+
+            <div class="chat-input-area">
+                <input type="text" id="chat-input" placeholder="Escribe tu mensaje..." autocomplete="off">
+                <button id="chat-send"><i class="fa-solid fa-paper-plane"></i></button>
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+
+<!-- ===========================
+     MODAL DE SERVICIO
+=========================== -->
+<div class="modal-overlay" id="modal-overlay">
+    <div class="modal-box">
+        <span class="modal-close" id="modal-close">✕</span>
+        <i class="modal-icon" id="modal-icon"></i>
+        <h3 id="modal-title"></h3>
+        <p id="modal-desc"></p>
+        <ul class="modal-features" id="modal-features"></ul>
+        <a href="#" class="btn">Solicitar información</a>
+    </div>
+</div>
+
+
 <script src="js/navbar.js"></script>
+<script src="js/spa.js"></script>
+<script src="js/services.js"></script>
+<script src="js/chatbot-demo.js"></script>
 <script src="js/main.js"></script>
 
 </body>

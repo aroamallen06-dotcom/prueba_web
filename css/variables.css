@@ -4,14 +4,14 @@
 
     --primary:#2563EB;
     --secondary:#1E40AF;
-    --accent:#F59E0B;
+    --accent:#00d5ff;
 
     --white:#FFFFFF;
     --black:#111827;
 
-    --background:#F8FAFC;
+    --background:#ffffff;
 
-    --text:#374151;
+    --text:#000000;
 
     /* Tipografía */
 
@@ -21,7 +21,7 @@
 
     --radius:12px;
 
-    --shadow:0px 10px 25px rgba(0,0,0,.08);
+    --shadow:0px 0px 10px rgba(0,0,0,.08);
 
     --transition:.3s;
 
