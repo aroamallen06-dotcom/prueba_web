@@ -678,3 +678,152 @@ ul{
     background:#FEF2F2;
     color:#B91C1C;
 }
+
+/* ===========================
+   GALERÍA
+=========================== */
+
+.gallery-section{
+    padding:120px 0;
+}
+
+.gallery-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:30px;
+}
+
+.gallery-card{
+    background:white;
+    border-radius:20px;
+    overflow:hidden;
+    box-shadow:0 8px 20px rgba(0,0,0,.05);
+    transition:.35s;
+}
+
+.gallery-card:hover{
+    transform:translateY(-10px);
+    box-shadow:0 20px 40px rgba(0,0,0,.10);
+}
+
+.gallery-preview{
+    height:180px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+
+.gallery-preview i{
+    font-size:3.5rem;
+    color:white;
+}
+
+.preview-1{
+    background:linear-gradient(135deg, #2563EB, #60A5FA);
+}
+
+.preview-2{
+    background:linear-gradient(135deg, #EA580C, #FB923C);
+}
+
+.preview-3{
+    background:linear-gradient(135deg, #059669, #34D399);
+}
+
+.gallery-info{
+    padding:30px;
+}
+
+.gallery-tag{
+    display:inline-block;
+    background:#EEF4FF;
+    color:var(--primary);
+    font-size:.75rem;
+    font-weight:bold;
+    text-transform:uppercase;
+    letter-spacing:1px;
+    padding:5px 14px;
+    border-radius:50px;
+    margin-bottom:14px;
+}
+
+.gallery-info h3{
+    font-size:1.3rem;
+    margin-bottom:12px;
+}
+
+.gallery-info p{
+    color:#666;
+    line-height:1.7;
+    font-size:.95rem;
+}
+
+/* ===========================
+   MODAL DE CAPTURAS (GALERÍA)
+=========================== */
+
+.gallery-card{
+    cursor:pointer;
+}
+
+.gallery-modal-box{
+    max-width:700px;
+    text-align:left;
+}
+
+.gallery-modal-box .gallery-tag{
+    margin-bottom:15px;
+}
+
+.gallery-modal-box h3{
+    font-size:1.6rem;
+    margin-bottom:12px;
+}
+
+.gallery-modal-box p{
+    color:#666;
+    line-height:1.7;
+    margin-bottom:25px;
+}
+
+.gallery-screenshots{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:15px;
+}
+
+.screenshot-item{
+    position:relative;
+    aspect-ratio:16/10;
+    border-radius:12px;
+    overflow:hidden;
+    background:#f1f5f9;
+    border:1px dashed #cbd5e1;
+}
+
+.screenshot-item img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    display:block;
+}
+
+/* Mientras no exista la imagen real, mostramos este aviso en vez de un icono roto */
+.screenshot-item.missing img{
+    display:none;
+}
+
+.screenshot-item.missing::after{
+    content:"📷 Añade tu captura aquí\A" attr(data-path);
+    white-space:pre-line;
+    position:absolute;
+    inset:0;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    padding:15px;
+    color:#94a3b8;
+    font-size:.75rem;
+    line-height:1.5;
+}

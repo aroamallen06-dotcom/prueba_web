@@ -34,7 +34,7 @@
             <ul class="nav-links" id="nav-links">
                 <li><a href="#" data-target="inicio" class="nav-link active">Inicio</a></li>
                 <li><a href="#" data-target="servicios" class="nav-link">Servicios</a></li>
-                <li><a href="#">Galería</a></li>
+                <li><a href="#" data-target="galeria">Galería</a></li>
                 <li><a href="#">Contacto</a></li>
             </ul>
 
@@ -214,6 +214,58 @@
 
 
 <!-- ===========================
+     GALERÍA
+=========================== -->
+<section class="gallery-section page-section" id="galeria">
+    <div class="container">
+
+        <div class="section-title">
+            <span>Portfolio</span>
+            <h2>Proyectos</h2>
+            <p>Algunos ejemplos de lo que puedo crear para tu negocio.</p>
+        </div>
+
+        <div class="gallery-grid">
+
+            <div class="gallery-card" data-project="peluqueria">
+                <div class="gallery-preview preview-1">
+                    <i class="fa-solid fa-scissors"></i>
+                </div>
+                <div class="gallery-info">
+                    <span class="gallery-tag">Proyecto personal</span>
+                    <h3>Peluquería Bella</h3>
+                    <p>Web con sistema de reservas online para una peluquería, pensada para reducir las llamadas y gestionar citas automáticamente.</p>
+                </div>
+            </div>
+
+            <div class="gallery-card" data-project="restaurante">
+                <div class="gallery-preview preview-2">
+                    <i class="fa-solid fa-utensils"></i>
+                </div>
+                <div class="gallery-info">
+                    <span class="gallery-tag">Proyecto personal</span>
+                    <h3>Restaurante La Toscana</h3>
+                    <p>Landing page con menú digital, ubicación y un chatbot que responde dudas sobre horarios y reservas de mesa.</p>
+                </div>
+            </div>
+
+            <div class="gallery-card" data-project="clinica">
+                <div class="gallery-preview preview-3">
+                    <i class="fa-solid fa-tooth"></i>
+                </div>
+                <div class="gallery-info">
+                    <span class="gallery-tag">Proyecto personal</span>
+                    <h3>Clínica Dental Sonrisas</h3>
+                    <p>Web corporativa con integración de Google Calendar para sincronizar las citas del equipo automáticamente.</p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
+<!-- ===========================
      MODAL DE SERVICIO
 =========================== -->
 <div class="modal-overlay" id="modal-overlay">
@@ -228,11 +280,26 @@
 </div>
 
 
+<!-- ===========================
+     MODAL DE CAPTURAS (GALERÍA)
+=========================== -->
+<div class="modal-overlay" id="gallery-overlay">
+    <div class="modal-box gallery-modal-box">
+        <span class="modal-close" id="gallery-modal-close">✕</span>
+        <span class="gallery-tag" id="gallery-modal-tag"></span>
+        <h3 id="gallery-modal-title"></h3>
+        <p id="gallery-modal-desc"></p>
+        <div class="gallery-screenshots" id="gallery-screenshots"></div>
+    </div>
+</div>
+
+
 <script src="js/navbar.js"></script>
 <script src="js/spa.js"></script>
 <script src="js/services.js"></script>
 <script src="js/chatbot-demo.js"></script>
 <script src="js/reservas-demo.js"></script>
+<script src="js/gallery.js"></script>
 <script src="js/main.js"></script>
 
 </body>
