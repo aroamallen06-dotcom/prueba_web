@@ -62,8 +62,9 @@ const modalFeatures = document.getElementById("modal-features");
 
 // Servicios que ya tienen una demo real (sección propia) en vez de solo el modal
 const servicesWithDemo = {
-    chatbot: "demo-chatbot"
-    // cuando montemos la demo de reservas, añadiríamos: reservas: "demo-reservas"
+    chatbot: "demo-chatbot",
+    reservas: "demo-reservas"
+    // cuando montemos la demo de Google Calendar, añadiríamos: calendar: "demo-calendar"
 };
 
 // ===========================

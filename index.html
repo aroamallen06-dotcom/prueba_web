@@ -7,7 +7,7 @@
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Desss Web</title>
+    <title>Business Template</title>
 
     <link rel="stylesheet" href="css/variables.css">
     <link rel="stylesheet" href="css/style.css">
@@ -26,7 +26,7 @@
     <div class="container navbar">
 
         <a href="#" class="logo">
-            Desss<span>Web</span>
+            Business<span>Template</span>
         </a>
 
         <nav class="nav">
@@ -163,6 +163,57 @@
 
 
 <!-- ===========================
+     DEMO: RESERVAS
+=========================== -->
+<section class="demo-section page-section" id="demo-reservas">
+    <div class="container">
+
+        <button class="back-btn" id="back-to-servicios-reservas">← Volver a Servicios</button>
+
+        <div class="section-title">
+            <span>Demo en vivo</span>
+            <h2>Sistema de Reservas</h2>
+            <p>Elige un día y una hora disponible para reservar tu cita, tal como lo haría uno de tus clientes.</p>
+        </div>
+
+        <div class="calendar-box">
+
+            <div class="calendar-header">
+                <button id="cal-prev" class="cal-nav">‹</button>
+                <span id="cal-month-label"></span>
+                <button id="cal-next" class="cal-nav">›</button>
+            </div>
+
+            <div class="calendar-weekdays">
+                <span>L</span><span>M</span><span>X</span><span>J</span><span>V</span><span>S</span><span>D</span>
+            </div>
+
+            <div class="calendar-grid" id="calendar-grid"></div>
+
+            <div class="booking-panel" id="booking-panel">
+
+                <h4 id="booking-panel-date"></h4>
+
+                <div class="time-slots" id="time-slots"></div>
+
+                <div class="booking-field">
+                    <label for="booking-name">Tu nombre</label>
+                    <input type="text" id="booking-name" placeholder="Escribe tu nombre">
+                </div>
+
+                <button class="btn" id="booking-confirm">Confirmar Reserva</button>
+
+                <div class="booking-confirmation" id="booking-confirmation"></div>
+
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+
+<!-- ===========================
      MODAL DE SERVICIO
 =========================== -->
 <div class="modal-overlay" id="modal-overlay">
@@ -181,6 +232,7 @@
 <script src="js/spa.js"></script>
 <script src="js/services.js"></script>
 <script src="js/chatbot-demo.js"></script>
+<script src="js/reservas-demo.js"></script>
 <script src="js/main.js"></script>
 
 </body>
